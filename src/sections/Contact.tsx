@@ -133,8 +133,8 @@ export function Contact() {
                 <div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2">Email</h3>
                   <p className="text-gray-600 mb-2">Scrie-ne pentru informații</p>
-                  <a href="mailto:contact@doctorqdent.ro" className="text-[#0a7a8a] font-semibold text-lg hover:underline">
-                    contact@doctorqdent.ro
+                  <a href="mailto:Mahmudqabbani96@gmail.com" className="text-[#0a7a8a] font-semibold text-lg hover:underline">
+                    Mahmudqabbani96@gmail.com
                   </a>
                 </div>
               </CardContent>

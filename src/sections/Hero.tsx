@@ -7,7 +7,7 @@ export function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/clinic-interior.webp"
+          src="/images/Imagine Q1.jpeg"
           alt="Clinica Doctor Q Dent"
           className="w-full h-full object-cover"
         />

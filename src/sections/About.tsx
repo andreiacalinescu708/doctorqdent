@@ -18,7 +18,7 @@ export function About() {
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="/images/team.jpg"
+                src="/images/Imagine Q2.jpeg"
                 alt="Echipa Doctor Q Dent"
                 className="w-full h-auto object-cover"
               />
