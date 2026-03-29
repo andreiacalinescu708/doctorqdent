@@ -1,0 +1,55 @@
+/* Custom styles for Doctor Q Dent website */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0a7a8a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #085a6a;
+}
+
+/* Selection color */
+::selection {
+  background: #0a7a8a;
+  color: white;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid #0a7a8a;
+  outline-offset: 2px;
+}
+
+/* Image hover effect */
+.image-hover {
+  transition: transform 0.3s ease;
+}
+
+.image-hover:hover {
+  transform: scale(1.02);
+}
+
+/* Card hover lift */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.15);
+}
