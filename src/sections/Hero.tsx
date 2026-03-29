@@ -77,7 +77,15 @@ export function Hero() {
                   <Clock className="w-5 h-5 text-cyan-300 mt-0.5 flex-shrink-0" />
                   <div>
                     <p className="font-medium text-sm">Program</p>
-                    <p className="text-white/80 text-sm">Luni - Sâmbătă</p>
+                    <div className="text-white/80 text-xs grid grid-cols-2 gap-x-4 gap-y-0.5">
+                      <span>Luni: 09:00 - 11:00</span>
+                      <span>Marți: 9:30 - 15:00</span>
+                      <span>Miercuri: Slatina</span>
+                      <span>Joi: 9:30 - 15:00</span>
+                      <span>Vineri: Filiasi</span>
+                      <span>Sâmbătă: 10:00 - 14:00</span>
+                      <span className="col-span-2">Duminică: Închis</span>
+                    </div>
                   </div>
                 </div>
               </div>
