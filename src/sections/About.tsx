@@ -1,4 +1,5 @@
-import { Check, Award, Users, Heart } from 'lucide-react';
+import { useState } from 'react';
+import { Check, Award, Users, Heart, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const features = [
   'Echipamente stomatologice moderne',
@@ -9,7 +10,17 @@ const features = [
   'Prețuri accesibile pentru toți',
 ];
 
+const aboutImages = [
+  { src: '/images/Imagine Q2.jpeg', alt: 'Echipa Doctor Q Dent' },
+  { src: '/images/Imagine Q1.jpeg', alt: 'Clinica Doctor Q Dent' },
+];
+
 export function About() {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  const nextImage = () => setCurrentImage((prev) => (prev + 1) % aboutImages.length);
+  const prevImage = () => setCurrentImage((prev) => (prev - 1 + aboutImages.length) % aboutImages.length);
+
   return (
     <section id="despre" className="py-20 lg:py-28 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
@@ -18,10 +29,40 @@ export function About() {
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="/images/Imagine Q2.jpeg"
-                alt="Echipa Doctor Q Dent"
-                className="w-full h-auto object-cover"
+                src={aboutImages[currentImage].src}
+                alt={aboutImages[currentImage].alt}
+                className="w-full h-auto object-cover aspect-[4/3]"
               />
+              
+              {/* Navigation Arrows */}
+              <button
+                onClick={prevImage}
+                className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 hover:bg-white text-gray-800 rounded-full shadow-lg flex items-center justify-center transition-all"
+                aria-label="Poza anterioară"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+              <button
+                onClick={nextImage}
+                className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 hover:bg-white text-gray-800 rounded-full shadow-lg flex items-center justify-center transition-all"
+                aria-label="Poza următoare"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+
+              {/* Dots Indicator */}
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+                {aboutImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentImage(index)}
+                    className={`w-2.5 h-2.5 rounded-full transition-all ${
+                      index === currentImage ? 'bg-white' : 'bg-white/50 hover:bg-white/75'
+                    }`}
+                    aria-label={`Mergi la poza ${index + 1}`}
+                  />
+                ))}
+              </div>
             </div>
             
             {/* Floating Card */}
