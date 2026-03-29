@@ -75,16 +75,37 @@ export function Hero() {
                 </div>
                 <div className="flex items-start gap-3">
                   <Clock className="w-5 h-5 text-cyan-300 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <p className="font-medium text-sm">Program</p>
-                    <div className="text-white/80 text-xs grid grid-cols-2 gap-x-4 gap-y-0.5">
-                      <span>Luni: 09:00 - 11:00</span>
-                      <span>Marți: 9:30 - 15:00</span>
-                      <span>Miercuri: Slatina</span>
-                      <span>Joi: 9:30 - 15:00</span>
-                      <span>Vineri: Filiasi</span>
-                      <span>Sâmbătă: 10:00 - 14:00</span>
-                      <span className="col-span-2">Duminică: Închis</span>
+                  <div className="min-w-[150px]">
+                    <p className="font-medium text-sm mb-1">Program</p>
+                    <div className="text-white/80 text-xs space-y-0.5">
+                      <div className="flex justify-between gap-4">
+                        <span>Luni</span>
+                        <span>09:00 - 11:00</span>
+                      </div>
+                      <div className="flex justify-between gap-4">
+                        <span>Marți</span>
+                        <span>9:30 - 15:00</span>
+                      </div>
+                      <div className="flex justify-between gap-4">
+                        <span>Miercuri</span>
+                        <span>Slatina</span>
+                      </div>
+                      <div className="flex justify-between gap-4">
+                        <span>Joi</span>
+                        <span>9:30 - 15:00</span>
+                      </div>
+                      <div className="flex justify-between gap-4">
+                        <span>Vineri</span>
+                        <span>Filiasi</span>
+                      </div>
+                      <div className="flex justify-between gap-4">
+                        <span>Sâmbătă</span>
+                        <span>10:00 - 14:00</span>
+                      </div>
+                      <div className="flex justify-between gap-4">
+                        <span>Duminică</span>
+                        <span>Închis</span>
+                      </div>
                     </div>
                   </div>
                 </div>
